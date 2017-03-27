@@ -1,0 +1,13 @@
+#s {
+	font: Tahoma; 
+}
+
+#myUL {
+	list-style-position: inside; 
+	margin: 70px;
+	font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif; 
+}
+
+#outerList {
+	padding: 15px;
+}

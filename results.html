@@ -1,0 +1,163 @@
+<!doctype html> 
+<html>
+	<head>
+		<title>Search Results</title>
+		<link rel="stylesheet" href="searchStyle.css">
+
+		<!-- Latest compiled and minified CSS -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+		<!-- Optional theme -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+		<style>
+	      .gap-25 {
+	        width:100%;
+	        height:25px;
+	      }
+	      .gap-20 {
+	        width:100%;
+	        height:20px;
+	      }
+	      .gap-30 {
+	        width:100%;
+	        height:30px;
+	      }
+	    </style>
+	</head>
+
+	<body>
+		<header class="navbar">
+			 <div class="container navbar-inverted">
+			 	<nav role="navigation">
+			    <!-- Brand and toggle get grouped for better mobile display -->
+			    <div class="navbar-header">
+			      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+			        <span class="sr-only">Toggle navigation</span>
+			        <span class="icon-bar"></span>
+			        <span class="icon-bar"></span>
+			        <span class="icon-bar"></span>
+			      </button>
+			      <a class="navbar-brand" href="home.html">
+			      	<img src="images/logo.png" style="width:260px">
+			      </a>
+			    </div>
+
+			    <!-- Collect the nav links, forms, and other content for toggling -->
+			    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+			      <ul class="nav navbar-nav">
+			        <li class="active"><a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">About Us<span class="sr-only">(current)</span></a></li>
+			        <li><a href="howitworks.html">How It Works</a></li>
+			        <li class="dropdown">
+			          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Categories<span class="caret"></span></a>
+			          <ul class="dropdown-menu">
+			            <li><a href="#">Action</a></li>
+			            <li><a href="#">Another action</a></li>
+			            <li><a href="#">Something else here</a></li>
+			            <li role="separator" class="divider"></li>
+			            <li><a href="#">Separated link</a></li>
+			            <li role="separator" class="divider"></li>
+			            <li><a href="#">One more separated link</a></li>
+			          </ul>
+			        </li>
+			      </ul>
+			      <form class="navbar-form navbar-right">
+			        <div class="form-group">
+			          <input id="searchInput" type="text" class="form-control" placeholder="Search">
+			        </div>
+			        <button onkeyup="searchFunction()" class="btn btn-default">Submit</button>
+			      </form>
+			    </div><!-- /.navbar-collapse -->
+			  </div><!-- /.container-fluid -->
+			  </nav>
+			</div>
+		</header>
+
+		<div class="container">
+			<div class="row"> 
+				<div class="col-sm-10">
+					<h2 id="s">Search results:</h2>
+				</div> 
+				<div class="col-sm-2">
+					<a href="home.html" class="btn btn-primary">
+						<h4>Search Again</h4>
+					</a>	
+				</div> 
+			</div>	
+		</div>
+
+		<ul id="myUL" style="list-style: none;">
+		  <li id="outerList"><a href="item1.html" class="header"><h3>Blue prom dress</h3></a></li>
+		    <ul style="list-style: none;">
+		      <li> 
+		        <img src="https://s-media-cache-ak0.pinimg.com/736x/af/13/0e/af130e70590b8faffdba8e4d7f73065f.jpg" style="width:200px">  
+		      </li>
+		      <li>Fremont, CA</li>
+		      <li>Looking for: jewlery, makeup</li>
+		    </ul>
+
+		  <li id="outerList"><a href="item2.html" class="header"><h3>Black heels</h3></a></li>
+		    <ul style="list-style: none;">
+		      <li> 
+		        <img src="https://s-media-cache-ak0.pinimg.com/736x/95/db/6e/95db6ea0bd91b9663507edcc5896aa32.jpg" style="width:200px">  
+		      </li>
+		      <li>San Francisco, CA</li>
+		      <li>Looking for: dress shirt, necklaces</li>
+		    </ul>  
+
+		  <li id="outerList"><a href="item3.html" class="header"><h3>Cool graphic t-shirt</h3></a></li>
+		    <ul style="list-style: none;">
+		      <li> 
+		        <img src="https://cdn-img-1.wanelo.com/p/5a8/217/f11/9dc22400680c235df568864/x354-q80.jpg" style="width:200px">  
+		      </li>
+		      <li>San Jose, CA</li>
+		      <li>Looking for: heels</li>
+		    </ul>    
+
+		  <li id="outerList"><a href="item4.html" class="header"><h3>Pink short prom dress</h3></a></li>
+		    <ul style="list-style: none;">
+		      <li> 
+		        <img src="https://s-media-cache-ak0.pinimg.com/736x/8f/f8/c6/8ff8c6790223615ce89aa91d6bafe1f9.jpg" style="width:200px">  
+		      </li>
+		      <li>San Francisco, CA</li>
+		      <li>Looking for: earrings</li>
+		    </ul>  
+
+		  <li id="outerList"><a href="item5.html" class="header"><h3>Silver floral necklace</h3></a></li>
+		    <ul style="list-style: none;">
+		      <li> 
+		        <img src="http://cdn3.volusion.com/xvdak.oqkom/v/vspfiles/photos/Crystal-Brilliant-Bib-2.jpg" style="width:200px">  
+		      </li>
+		      <li>Fremont, CA</li>
+		      <li>Looking for: prom dress</li>
+		    </ul>    
+		</ul>
+
+	<script type="text/javascript">
+		function searchFunction() {
+	    
+	    // Declare variables
+	    var input, filter, ul, li, a, i;
+	    int count= 0; 
+	    //read in all search bar values
+	    input = document.getElementById('searchInput');
+	    filter = input.value.toUpperCase();
+	    ul = document.getElementById("myUL");
+	    li = ul.getElementsByTagName('li');
+
+	    // Loop through all list items, and hide those who don't match the search query
+	    for (i = 0; i < li.length; i++) {
+	        a = li[i].getElementsByTagName("a")[0];
+	        if (a.innerHTML.toUpperCase().indexOf(filter) > -1) {
+	            li[i].display = "";
+	            count++; 
+	        } else {
+	            li[i].display = "none";
+	        }
+	    }
+	} </script>
+		
+		<!-- Latest compiled and minified JavaScript -->
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+	</body>
+
+</html>
